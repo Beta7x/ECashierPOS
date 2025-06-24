@@ -1,0 +1,94 @@
+﻿Imports MySql.Data.MySqlClient
+
+Namespace Helpers
+    Module MySQLHelper
+        ' Auto-create INSERT query dan parameter binding
+        Public Function CreateInsertCommand(
+            tableName As String,
+            fields As Dictionary(Of String, Object),
+            conn As MySqlConnection) As MySqlCommand
+
+            Dim columns As String = String.Join(", ", fields.Keys)
+            Dim placeholders As String = String.Join(", ", fields.Keys.Select(Function(k) "@" & k))
+            Dim sql As String = $"INSERT INTO {tableName} ({columns}) VALUES ({placeholders})"
+
+            Dim cmd As New MySqlCommand(sql, conn)
+            For Each pair In fields
+                cmd.Parameters.AddWithValue("@" & pair.Key, pair.Value)
+            Next
+
+            Return cmd
+        End Function
+
+        ' Auto-create UPDATE query dan parameter binding
+        Public Function CreateUpdateCommand(
+            tableName As String,
+            fields As Dictionary(Of String, Object),
+            keyField As String,
+            keyValue As String,
+            conn As MySqlConnection,
+            Optional excludedFields As List(Of String) = Nothing) As MySqlCommand
+
+            ' Filter out excluded fields (e.g., "id")
+            Dim filteredFields = If(excludedFields IsNot Nothing,
+                fields.Where(Function(p) Not excludedFields.Contains(p.Key)).ToDictionary(Function(p) p.Key, Function(p) p.Value), fields)
+
+            Dim setClause As String = String.Join(", ", filteredFields.Keys.Select(Function(k) $"{k}=@{k}"))
+            Dim sql As String = $"UPDATE {tableName} SET {setClause} WHERE {keyField}=@{keyField}"
+
+            Dim cmd As New MySqlCommand(sql, conn)
+            For Each pair In filteredFields
+                cmd.Parameters.AddWithValue("@" & pair.Key, pair.Value)
+            Next
+            cmd.Parameters.AddWithValue("@" & keyField, keyValue)
+
+            Return cmd
+        End Function
+
+        ' Auto-create DELETE query dan parameter binding
+        Public Function CreateDeleteCommand(
+            tableName As String,
+            keyField As String,
+            keyValue As Object,
+            conn As MySqlConnection) As MySqlCommand
+
+            Dim sql As String = $"DELETE FROM {tableName} WHERE {keyField}=?"
+            Dim cmd As New MySqlCommand(sql, conn)
+            cmd.Parameters.AddWithValue("?", keyValue)
+
+            Return cmd
+        End Function
+
+        ' Auto-create SELECT ALL query
+        Public Function CreateSelectAllCommand(
+            tableName As String,
+            conn As MySqlConnection,
+            Optional orderBy As String = Nothing,
+            Optional sortDirection As String = "ASC") As MySqlCommand
+
+            Dim sql As String = $"SELECT * FROM {tableName}"
+
+            If Not String.IsNullOrWhiteSpace(orderBy) Then
+                ' Sort direction validation
+                Dim direction = If(sortDirection.ToUpper() = "DESC", "DESC", "ASC")
+                sql &= $" ORDER BY {orderBy} {direction}"
+            End If
+
+            Return New MySqlCommand(sql, conn)
+        End Function
+
+        ' Auto-create SELECT BY ID query dan parameter binding
+        Public Function CreateSelectByIdCommand(
+            tableName As String,
+            keyField As String,
+            keyValue As Object,
+            conn As MySqlConnection) As MySqlCommand
+
+            Dim sql = $"SELECT * FROM {tableName} WHERE {keyField}=?"
+            Dim cmd As New MySqlCommand(sql, conn)
+            cmd.Parameters.AddWithValue("?", keyValue)
+
+            Return cmd
+        End Function
+    End Module
+End Namespace
