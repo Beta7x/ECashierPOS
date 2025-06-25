@@ -102,12 +102,12 @@ Partial Class CategoryCard
         btnUpdate.FillColor = Color.Transparent
         btnUpdate.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnUpdate.ForeColor = Color.Transparent
+        btnUpdate.Image = My.Resources.Resources.pen
         btnUpdate.Location = New Point(158, 223)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnUpdate.Size = New Size(34, 34)
         btnUpdate.TabIndex = 3
-        btnUpdate.Text = "U"
         ' 
         ' btnDelete
         ' 
@@ -124,12 +124,12 @@ Partial Class CategoryCard
         btnDelete.FillColor = Color.Transparent
         btnDelete.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnDelete.ForeColor = Color.Transparent
+        btnDelete.Image = My.Resources.Resources.delete__1_
         btnDelete.Location = New Point(199, 223)
         btnDelete.Name = "btnDelete"
         btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnDelete.Size = New Size(34, 34)
         btnDelete.TabIndex = 4
-        btnDelete.Text = "D"
         ' 
         ' Guna2HtmlLabel3
         ' 
