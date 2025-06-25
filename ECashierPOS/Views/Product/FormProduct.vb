@@ -1,6 +1,5 @@
 ﻿Imports ECashierPOS.Controllers
 Imports ECashierPOS.Models.Entities
-Imports ECashierPOS.Models.Interfaces
 
 Public Class FormProduct
     Private ReadOnly controller As ProductController

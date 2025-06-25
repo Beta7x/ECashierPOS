@@ -1,6 +1,7 @@
 ﻿Imports ECashierPOS.Database.Factories
 Imports ECashierPOS.Models.Entities
 Imports ECashierPOS.Models.Interfaces
+Imports ECashierPOS.Utils
 
 Namespace Models.Repositories
     Public Class UserRepository
@@ -43,6 +44,33 @@ Namespace Models.Repositories
                 {"password", entity.Password},
                 {"role", entity.Role}
             }
+        End Function
+
+        Public Function GetByUsername(username As String) As OperationResult(Of User) Implements IUserRepository.GetByUsername
+            Dim sql As String = $"SELECT * FROM {TableName} WHERE username=@username"
+            Try
+                Using conn As IDbConnection = GetConnection()
+                    conn.Open()
+                    Using cmd As IDbCommand = conn.CreateCommand()
+                        cmd.CommandText = sql
+
+                        Dim param = cmd.CreateParameter()
+                        param.ParameterName = "@username"
+                        param.Value = "%" & username & "%"
+                        cmd.Parameters.Add(param)
+
+                        Using reader As IDataReader = cmd.ExecuteReader()
+                            If reader.Read() Then
+                                Return OperationResult(Of User).Ok(MapEntity(reader), "Berhasil mendapatkan data.")
+                            End If
+                        End Using
+
+                        Return OperationResult(Of User).Ok(Nothing, "Tidak ada data.")
+                    End Using
+                End Using
+            Catch ex As Exception
+                Return OperationResult(Of User).Fail($"[GET BY USERNAME] Gagal mendapatkan data: {ex.Message}", ex)
+            End Try
         End Function
     End Class
 End Namespace

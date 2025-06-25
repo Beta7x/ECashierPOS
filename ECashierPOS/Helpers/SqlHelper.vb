@@ -21,11 +21,6 @@
                 cmd.Parameters.Add(param)
             Next
 
-            'Dim cmd As New MySqlCommand(sql, conn)
-            'For Each pair In fields
-            '    cmd.Parameters.AddWithValue("@" & pair.Key, pair.Value)
-            'Next
-
             Return cmd
         End Function
 
@@ -62,12 +57,6 @@
             keyParam.Value = keyValue
             cmd.Parameters.Add(keyParam)
 
-            'Dim cmd As New MySqlCommand(sql, conn)
-            'For Each pair In filteredFields
-            '    cmd.Parameters.AddWithValue("@" & pair.Key, pair.Value)
-            'Next
-            'cmd.Parameters.AddWithValue("@" & keyField, keyValue)
-
             Return cmd
         End Function
 
@@ -79,8 +68,6 @@
             conn As IDbConnection) As IDbCommand
 
             Dim sql As String = $"DELETE FROM {tableName} WHERE {keyField}=@{keyField}"
-            'Dim cmd As New MySqlCommand(sql, conn)
-            'cmd.Parameters.AddWithValue("?", keyValue)
 
             Dim cmd = conn.CreateCommand()
             cmd.CommandText = sql
@@ -122,8 +109,6 @@
             conn As IDbConnection) As IDbCommand
 
             Dim sql = $"SELECT * FROM {tableName} WHERE {keyField}=@{keyField}"
-            'Dim cmd As New MySqlCommand(sql, conn)
-            'cmd.Parameters.AddWithValue("?", keyValue)
 
             Dim cmd = conn.CreateCommand()
             cmd.CommandText = sql

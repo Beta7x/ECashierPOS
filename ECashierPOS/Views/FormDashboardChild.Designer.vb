@@ -23,37 +23,89 @@ Partial Class FormDashboardChild
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Guna2HtmlLabel1 = New Guna.UI2.WinForms.Guna2HtmlLabel()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
+        ProductPanel = New Guna.UI2.WinForms.Guna2Panel()
+        CalculatePanel = New Guna.UI2.WinForms.Guna2Panel()
+        PanelTotal = New Guna.UI2.WinForms.Guna2Panel()
+        Guna2Panel3 = New Guna.UI2.WinForms.Guna2Panel()
+        CalculatePanel.SuspendLayout()
         SuspendLayout()
-        ' 
-        ' Guna2HtmlLabel1
-        ' 
-        Guna2HtmlLabel1.BackColor = Color.Transparent
-        Guna2HtmlLabel1.Location = New Point(12, 12)
-        Guna2HtmlLabel1.Name = "Guna2HtmlLabel1"
-        Guna2HtmlLabel1.Size = New Size(60, 17)
-        Guna2HtmlLabel1.TabIndex = 0
-        Guna2HtmlLabel1.Text = "Dashboard"
         ' 
         ' Guna2Elipse1
         ' 
         Guna2Elipse1.BorderRadius = 8
         Guna2Elipse1.TargetControl = Me
         ' 
+        ' ProductPanel
+        ' 
+        ProductPanel.BackColor = Color.White
+        ProductPanel.CustomizableEdges = CustomizableEdges1
+        ProductPanel.Dock = DockStyle.Fill
+        ProductPanel.Location = New Point(0, 0)
+        ProductPanel.Name = "ProductPanel"
+        ProductPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        ProductPanel.Size = New Size(479, 450)
+        ProductPanel.TabIndex = 0
+        ' 
+        ' CalculatePanel
+        ' 
+        CalculatePanel.BackColor = Color.Transparent
+        CalculatePanel.Controls.Add(PanelTotal)
+        CalculatePanel.Controls.Add(Guna2Panel3)
+        CalculatePanel.CustomizableEdges = CustomizableEdges7
+        CalculatePanel.Dock = DockStyle.Right
+        CalculatePanel.Location = New Point(479, 0)
+        CalculatePanel.Name = "CalculatePanel"
+        CalculatePanel.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        CalculatePanel.Size = New Size(321, 450)
+        CalculatePanel.TabIndex = 1
+        ' 
+        ' PanelTotal
+        ' 
+        PanelTotal.BackColor = Color.White
+        PanelTotal.CustomizableEdges = CustomizableEdges3
+        PanelTotal.Dock = DockStyle.Fill
+        PanelTotal.Location = New Point(0, 0)
+        PanelTotal.Name = "PanelTotal"
+        PanelTotal.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        PanelTotal.Size = New Size(321, 307)
+        PanelTotal.TabIndex = 1
+        ' 
+        ' Guna2Panel3
+        ' 
+        Guna2Panel3.BackColor = Color.White
+        Guna2Panel3.CustomizableEdges = CustomizableEdges5
+        Guna2Panel3.Dock = DockStyle.Bottom
+        Guna2Panel3.Location = New Point(0, 307)
+        Guna2Panel3.Name = "Guna2Panel3"
+        Guna2Panel3.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        Guna2Panel3.Size = New Size(321, 143)
+        Guna2Panel3.TabIndex = 0
+        ' 
         ' FormDashboardChild
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
-        Controls.Add(Guna2HtmlLabel1)
+        Controls.Add(ProductPanel)
+        Controls.Add(CalculatePanel)
         FormBorderStyle = FormBorderStyle.None
         Name = "FormDashboardChild"
         Text = "FormDashboardChild"
+        CalculatePanel.ResumeLayout(False)
         ResumeLayout(False)
-        PerformLayout()
     End Sub
-
-    Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
+    Friend WithEvents Guna2Panel3 As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents CalculatePanel As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents ProductPanel As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents PanelTotal As Guna.UI2.WinForms.Guna2Panel
 End Class

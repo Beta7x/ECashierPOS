@@ -2,8 +2,6 @@
 Imports ECashierPOS.Models.Entities
 Imports ECashierPOS.Models.Interfaces
 Imports ECashierPOS.Utils
-Imports MySql.Data.MySqlClient
-Imports Org.BouncyCastle.Bcpg.Sig
 
 Namespace Models.Repositories
     Public Class CategoryRepository
@@ -144,6 +142,7 @@ Namespace Models.Repositories
                 Using conn As IDbConnection = GetConnection()
                     conn.Open()
                     Using cmd As IDbCommand = conn.CreateCommand()
+                        cmd.CommandText = sql
                         Using reader As IDataReader = cmd.ExecuteReader()
                             While reader.Read()
                                 list.Add(New Category With {

@@ -3,7 +3,6 @@ Imports ECashierPOS.Helpers
 Imports ECashierPOS.Models.Entities
 Imports ECashierPOS.Models.Interfaces
 Imports ECashierPOS.Utils
-Imports MySql.Data.MySqlClient
 
 Namespace Models.Repositories
     Public MustInherit Class GenericRepository(Of T As {Class, IEntity})
@@ -44,7 +43,7 @@ Namespace Models.Repositories
 
         Public Function Insert(item As T) As OperationResult Implements IRepository(Of T).Insert
             Try
-                Using conn As MySqlConnection = GetConnection()
+                Using conn As IDbConnection = GetConnection()
                     conn.Open()
                     Dim fields = MapFields(item)
                     Dim cmd = SqlHelper.CreateInsertCommand(TableName, fields, conn)
@@ -62,7 +61,7 @@ Namespace Models.Repositories
 
         Public Function Update(item As T) As OperationResult Implements IRepository(Of T).Update
             Try
-                Using conn As MySqlConnection = GetConnection()
+                Using conn As IDbConnection = GetConnection()
                     conn.Open()
                     Dim fields = MapFields(item)
                     Dim cmd = SqlHelper.CreateUpdateCommand(TableName, fields, KeyField, item.Id, conn,
@@ -81,7 +80,7 @@ Namespace Models.Repositories
 
         Public Function Delete(id As String) As OperationResult Implements IRepository(Of T).Delete
             Try
-                Using conn As MySqlConnection = GetConnection()
+                Using conn As IDbConnection = GetConnection()
                     conn.Open()
                     Dim cmd = SqlHelper.CreateDeleteCommand(TableName, KeyField, id, conn)
                     If cmd.ExecuteNonQuery() > 0 Then
@@ -96,12 +95,12 @@ Namespace Models.Repositories
         End Function
 
         Public Function GetById(id As String) As OperationResult(Of T) Implements IRepository(Of T).GetById
-            Dim result As T = Nothing
+            Dim result As T
             Try
-                Using conn As MySqlConnection = GetConnection()
+                Using conn As IDbConnection = GetConnection()
                     conn.Open()
                     Dim cmd = SqlHelper.CreateSelectByIdCommand(TableName, KeyField, id, conn)
-                    Using reader As MySqlDataReader = cmd.ExecuteReader()
+                    Using reader As IDataReader = cmd.ExecuteReader()
                         If reader.Read() Then
                             result = MapEntity(reader)
                             Return OperationResult(Of T).Ok(result, "Berhasil mendapatkan data.")
@@ -118,10 +117,10 @@ Namespace Models.Repositories
         Public Function GetAll() As OperationResult(Of List(Of T)) Implements IRepository(Of T).GetAll
             Dim list As New List(Of T)()
             Try
-                Using conn As MySqlConnection = GetConnection()
+                Using conn As IDbConnection = GetConnection()
                     conn.Open()
                     Dim cmd = SqlHelper.CreateSelectAllCommand(TableName, conn, DefaultOrderBy, DefaultSortDirection)
-                    Using reader As MySqlDataReader = cmd.ExecuteReader()
+                    Using reader As IDataReader = cmd.ExecuteReader()
                         While reader.Read()
                             list.Add(MapEntity(reader))
                         End While

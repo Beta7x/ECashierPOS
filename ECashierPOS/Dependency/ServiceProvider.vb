@@ -26,11 +26,6 @@ Namespace Dependency
             services.AddSingleton(Of IUserRepository, UserRepository)()
             services.AddSingleton(Of ICategoryRepository, CategoryRepository)()
 
-            'services.AddSingleton(Of IUserRepository, MySQLUserRepository)()
-            'services.AddSingleton(Of ICustomerRepository, MySQLCustomerRepository)()
-            'services.AddSingleton(Of IProductRepository, MySQLProductRepository)()
-            'services.AddSingleton(Of ICategoryRepository, MySQLCategoryRepository)()
-
             ' Register all services
             services.AddSingleton(Of IProductService, ProductService)()
             services.AddSingleton(Of ICategoryService, CategoryService)()
@@ -41,13 +36,17 @@ Namespace Dependency
             services.AddSingleton(Of CustomerController)()
             services.AddSingleton(Of CategoryController)()
             services.AddSingleton(Of UserController)()
+            services.AddSingleton(Of AuthController)()
 
             ' Register all views or forms
             services.AddSingleton(Of FormDashboard)()
+            services.AddSingleton(Of FormDashboardChild)()
             services.AddSingleton(Of FormCustomer)()
             services.AddSingleton(Of FormProduct)()
             services.AddSingleton(Of FormCategory)()
             services.AddSingleton(Of FormLogin)()
+            services.AddSingleton(Of FormReport)()
+            services.AddSingleton(Of FormTransaction)()
 
             Return services.BuildServiceProvider()
         End Function

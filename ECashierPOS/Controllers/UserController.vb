@@ -10,7 +10,7 @@ Namespace Controllers
         Private ReadOnly repository As IUserRepository
         Private ReadOnly validator As UserValidator
 
-        Public Sub New(userRepository As MySQLUserRepository)
+        Public Sub New(userRepository As IUserRepository)
             repository = userRepository
             validator = New UserValidator()
         End Sub

@@ -23,14 +23,14 @@ Partial Class FormCategory
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
@@ -51,11 +51,11 @@ Partial Class FormCategory
         ' 
         Guna2Panel1.Controls.Add(Guna2Panel2)
         Guna2Panel1.Controls.Add(Guna2HtmlLabel1)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges15
+        Guna2Panel1.CustomizableEdges = CustomizableEdges7
         Guna2Panel1.Dock = DockStyle.Top
         Guna2Panel1.Location = New Point(0, 0)
         Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         Guna2Panel1.Size = New Size(1003, 65)
         Guna2Panel1.TabIndex = 1
         ' 
@@ -63,19 +63,20 @@ Partial Class FormCategory
         ' 
         Guna2Panel2.Controls.Add(textSearch)
         Guna2Panel2.Controls.Add(btnInsert)
-        Guna2Panel2.CustomizableEdges = CustomizableEdges13
+        Guna2Panel2.CustomizableEdges = CustomizableEdges5
         Guna2Panel2.Dock = DockStyle.Right
         Guna2Panel2.Location = New Point(585, 0)
         Guna2Panel2.Name = "Guna2Panel2"
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         Guna2Panel2.Size = New Size(418, 65)
         Guna2Panel2.TabIndex = 1
         ' 
         ' textSearch
         ' 
+        textSearch.Animated = True
         textSearch.BorderColor = Color.Gainsboro
         textSearch.BorderRadius = 8
-        textSearch.CustomizableEdges = CustomizableEdges9
+        textSearch.CustomizableEdges = CustomizableEdges1
         textSearch.DefaultText = ""
         textSearch.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
         textSearch.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
@@ -88,14 +89,15 @@ Partial Class FormCategory
         textSearch.Name = "textSearch"
         textSearch.PlaceholderText = "Cari..."
         textSearch.SelectedText = ""
-        textSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        textSearch.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         textSearch.Size = New Size(200, 36)
         textSearch.TabIndex = 1
         ' 
         ' btnInsert
         ' 
+        btnInsert.Animated = True
         btnInsert.BorderRadius = 8
-        btnInsert.CustomizableEdges = CustomizableEdges11
+        btnInsert.CustomizableEdges = CustomizableEdges3
         btnInsert.DisabledState.BorderColor = Color.DarkGray
         btnInsert.DisabledState.CustomBorderColor = Color.DarkGray
         btnInsert.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -103,11 +105,11 @@ Partial Class FormCategory
         btnInsert.FillColor = Color.FromArgb(CByte(241), CByte(137), CByte(10))
         btnInsert.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnInsert.ForeColor = Color.White
-        'btnInsert.Image = My.Resources.Resources.plus__1_
+        btnInsert.Image = My.Resources.Resources.plus__1_
         btnInsert.ImageAlign = HorizontalAlignment.Left
         btnInsert.Location = New Point(235, 13)
         btnInsert.Name = "btnInsert"
-        btnInsert.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnInsert.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnInsert.Size = New Size(166, 38)
         btnInsert.TabIndex = 0
         btnInsert.Text = "Tambah Kategori"

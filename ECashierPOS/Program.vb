@@ -12,10 +12,8 @@ Module Program
         ' Build DI container
         ServiceProvider = ServiceProviderFactory.Build()
 
-        Dim mainForm = ServiceProvider.GetService(Of FormDashboard)()
-        mainForm.StartPosition = FormStartPosition.CenterScreen
-
-        Application.Run(mainForm)
+        ' Jalankan context khusus
+        Application.Run(New MainAppContext(ServiceProvider))
     End Sub
 
 End Module

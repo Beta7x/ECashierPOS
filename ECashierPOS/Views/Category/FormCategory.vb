@@ -1,6 +1,5 @@
 ﻿Imports ECashierPOS.Controllers
 Imports ECashierPOS.Models.Entities
-Imports ECashierPOS.Models.Interfaces
 
 Public Class FormCategory
     Private controller As CategoryController
@@ -41,7 +40,6 @@ Public Class FormCategory
             End If
         Else
             Dim result = controller.SearchCategory(keyword)
-            'MessageBox.Show($"Hasil kategori: {result.Message}")
             If result.Success AndAlso result.Data IsNot Nothing Then
                 categories = result.Data
             End If

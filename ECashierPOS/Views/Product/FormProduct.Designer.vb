@@ -73,6 +73,7 @@ Partial Class FormProduct
         ' 
         ' textSearch
         ' 
+        textSearch.Animated = True
         textSearch.BorderColor = Color.Gainsboro
         textSearch.BorderRadius = 8
         textSearch.CustomizableEdges = CustomizableEdges1
@@ -94,6 +95,7 @@ Partial Class FormProduct
         ' 
         ' btnAdd
         ' 
+        btnAdd.Animated = True
         btnAdd.BorderRadius = 8
         btnAdd.CustomizableEdges = CustomizableEdges3
         btnAdd.DisabledState.BorderColor = Color.DarkGray
@@ -103,7 +105,7 @@ Partial Class FormProduct
         btnAdd.FillColor = Color.FromArgb(CByte(241), CByte(137), CByte(10))
         btnAdd.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnAdd.ForeColor = Color.White
-        'btnAdd.Image = My.Resources.Resources.plus__1_
+        btnAdd.Image = My.Resources.Resources.plus__1_
         btnAdd.ImageAlign = HorizontalAlignment.Left
         btnAdd.Location = New Point(235, 13)
         btnAdd.Name = "btnAdd"

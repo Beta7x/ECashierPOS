@@ -23,13 +23,13 @@ Partial Class ProductCard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         components = New ComponentModel.Container()
-        Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(ProductCard))
-        Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Elipse1 = New Guna.UI2.WinForms.Guna2Elipse(components)
         pbProductImage = New Guna.UI2.WinForms.Guna2PictureBox()
         labelProductName = New Guna.UI2.WinForms.Guna2HtmlLabel()
@@ -51,12 +51,12 @@ Partial Class ProductCard
         pbProductImage.BackColor = Color.White
         pbProductImage.BackgroundImageLayout = ImageLayout.Center
         pbProductImage.BorderRadius = 6
-        pbProductImage.CustomizableEdges = CustomizableEdges5
+        pbProductImage.CustomizableEdges = CustomizableEdges11
         pbProductImage.Image = CType(resources.GetObject("pbProductImage.Image"), Image)
         pbProductImage.ImageRotate = 0F
         pbProductImage.Location = New Point(16, 14)
         pbProductImage.Name = "pbProductImage"
-        pbProductImage.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        pbProductImage.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         pbProductImage.Size = New Size(239, 183)
         pbProductImage.SizeMode = PictureBoxSizeMode.StretchImage
         pbProductImage.TabIndex = 0
@@ -89,7 +89,7 @@ Partial Class ProductCard
         ' 
         labelProductPrice.BackColor = Color.Transparent
         labelProductPrice.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        labelProductPrice.Location = New Point(16, 293)
+        labelProductPrice.Location = New Point(16, 292)
         labelProductPrice.MaximumSize = New Size(220, 0)
         labelProductPrice.Name = "labelProductPrice"
         labelProductPrice.Size = New Size(62, 19)
@@ -107,7 +107,7 @@ Partial Class ProductCard
         btnDelete.BorderColor = Color.DarkGray
         btnDelete.BorderRadius = 8
         btnDelete.BorderThickness = 1
-        btnDelete.CustomizableEdges = CustomizableEdges3
+        btnDelete.CustomizableEdges = CustomizableEdges9
         btnDelete.DisabledState.BorderColor = Color.DarkGray
         btnDelete.DisabledState.CustomBorderColor = Color.DarkGray
         btnDelete.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -115,12 +115,12 @@ Partial Class ProductCard
         btnDelete.FillColor = Color.Transparent
         btnDelete.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnDelete.ForeColor = Color.Transparent
+        btnDelete.Image = My.Resources.Resources.delete__1_
         btnDelete.Location = New Point(221, 284)
         btnDelete.Name = "btnDelete"
-        btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         btnDelete.Size = New Size(34, 34)
         btnDelete.TabIndex = 4
-        btnDelete.Text = "D"
         ' 
         ' btnUpdate
         ' 
@@ -128,7 +128,7 @@ Partial Class ProductCard
         btnUpdate.BorderColor = Color.DarkGray
         btnUpdate.BorderRadius = 8
         btnUpdate.BorderThickness = 1
-        btnUpdate.CustomizableEdges = CustomizableEdges1
+        btnUpdate.CustomizableEdges = CustomizableEdges7
         btnUpdate.DisabledState.BorderColor = Color.DarkGray
         btnUpdate.DisabledState.CustomBorderColor = Color.DarkGray
         btnUpdate.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -136,12 +136,12 @@ Partial Class ProductCard
         btnUpdate.FillColor = Color.Transparent
         btnUpdate.Font = New Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnUpdate.ForeColor = Color.Transparent
+        btnUpdate.Image = My.Resources.Resources.pen
         btnUpdate.Location = New Point(176, 284)
         btnUpdate.Name = "btnUpdate"
-        btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnUpdate.Size = New Size(34, 34)
         btnUpdate.TabIndex = 5
-        btnUpdate.Text = "U"
         ' 
         ' ProductCard
         ' 

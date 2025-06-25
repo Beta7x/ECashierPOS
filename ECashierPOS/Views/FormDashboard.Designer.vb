@@ -53,7 +53,7 @@ Partial Class FormDashboard
         btnReport = New Guna.UI2.WinForms.Guna2Button()
         btnCustomer = New Guna.UI2.WinForms.Guna2Button()
         Guna2Panel2 = New Guna.UI2.WinForms.Guna2Panel()
-        Guna2Button5 = New Guna.UI2.WinForms.Guna2Button()
+        btnLogout = New Guna.UI2.WinForms.Guna2Button()
         btnProduct = New Guna.UI2.WinForms.Guna2Button()
         btnCategory = New Guna.UI2.WinForms.Guna2Button()
         btnTransaction = New Guna.UI2.WinForms.Guna2Button()
@@ -96,7 +96,8 @@ Partial Class FormDashboard
         Guna2Button1.FillColor = Color.Transparent
         Guna2Button1.Font = New Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         Guna2Button1.ForeColor = Color.White
-        'Guna2Button1.Image = My.Resources.Resources.bar_graph
+        Guna2Button1.Image = My.Resources.Resources.bar_graph
+        Guna2Button1.ImageAlign = HorizontalAlignment.Left
         Guna2Button1.Location = New Point(30, 25)
         Guna2Button1.Name = "Guna2Button1"
         Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
@@ -118,7 +119,7 @@ Partial Class FormDashboard
         btnReport.Font = New Font("Segoe UI", 9F)
         btnReport.ForeColor = Color.White
         btnReport.HoverState.FillColor = Color.FromArgb(CByte(241), CByte(137), CByte(10))
-        'btnReport.Image = My.Resources.Resources.report
+        btnReport.Image = My.Resources.Resources.report
         btnReport.ImageAlign = HorizontalAlignment.Left
         btnReport.Location = New Point(19, 343)
         btnReport.Name = "btnReport"
@@ -142,7 +143,7 @@ Partial Class FormDashboard
         btnCustomer.Font = New Font("Segoe UI", 9F)
         btnCustomer.ForeColor = Color.White
         btnCustomer.HoverState.FillColor = Color.FromArgb(CByte(241), CByte(137), CByte(10))
-        'btnCustomer.Image = My.Resources.Resources.group
+        btnCustomer.Image = My.Resources.Resources.customer
         btnCustomer.ImageAlign = HorizontalAlignment.Left
         btnCustomer.Location = New Point(19, 294)
         btnCustomer.Name = "btnCustomer"
@@ -155,7 +156,7 @@ Partial Class FormDashboard
         ' Guna2Panel2
         ' 
         Guna2Panel2.BackColor = Color.Transparent
-        Guna2Panel2.Controls.Add(Guna2Button5)
+        Guna2Panel2.Controls.Add(btnLogout)
         Guna2Panel2.CustomizableEdges = CustomizableEdges9
         Guna2Panel2.Dock = DockStyle.Bottom
         Guna2Panel2.Location = New Point(0, 452)
@@ -164,25 +165,27 @@ Partial Class FormDashboard
         Guna2Panel2.Size = New Size(224, 88)
         Guna2Panel2.TabIndex = 1
         ' 
-        ' Guna2Button5
+        ' btnLogout
         ' 
-        Guna2Button5.Animated = True
-        Guna2Button5.BackColor = Color.Transparent
-        Guna2Button5.BorderRadius = 8
-        Guna2Button5.CustomizableEdges = CustomizableEdges7
-        Guna2Button5.DisabledState.BorderColor = Color.DarkGray
-        Guna2Button5.DisabledState.CustomBorderColor = Color.DarkGray
-        Guna2Button5.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
-        Guna2Button5.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
-        Guna2Button5.FillColor = Color.FromArgb(CByte(41), CByte(52), CByte(53))
-        Guna2Button5.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
-        Guna2Button5.ForeColor = Color.White
-        Guna2Button5.Location = New Point(25, 23)
-        Guna2Button5.Name = "Guna2Button5"
-        Guna2Button5.ShadowDecoration.CustomizableEdges = CustomizableEdges8
-        Guna2Button5.Size = New Size(176, 43)
-        Guna2Button5.TabIndex = 5
-        Guna2Button5.Text = "Logout"
+        btnLogout.Animated = True
+        btnLogout.BackColor = Color.Transparent
+        btnLogout.BorderRadius = 8
+        btnLogout.CustomizableEdges = CustomizableEdges7
+        btnLogout.DisabledState.BorderColor = Color.DarkGray
+        btnLogout.DisabledState.CustomBorderColor = Color.DarkGray
+        btnLogout.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnLogout.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnLogout.FillColor = Color.FromArgb(CByte(41), CByte(52), CByte(53))
+        btnLogout.Font = New Font("Segoe UI Semibold", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        btnLogout.ForeColor = Color.White
+        btnLogout.Image = My.Resources.Resources._exit
+        btnLogout.ImageAlign = HorizontalAlignment.Left
+        btnLogout.Location = New Point(25, 23)
+        btnLogout.Name = "btnLogout"
+        btnLogout.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btnLogout.Size = New Size(176, 43)
+        btnLogout.TabIndex = 5
+        btnLogout.Text = "Logout"
         ' 
         ' btnProduct
         ' 
@@ -198,7 +201,7 @@ Partial Class FormDashboard
         btnProduct.Font = New Font("Segoe UI", 9F)
         btnProduct.ForeColor = Color.White
         btnProduct.HoverState.FillColor = Color.FromArgb(CByte(241), CByte(137), CByte(10))
-        'btnProduct.Image = My.Resources.Resources.shopping_cart
+        btnProduct.Image = My.Resources.Resources.shopping_cart__1_
         btnProduct.ImageAlign = HorizontalAlignment.Left
         btnProduct.Location = New Point(19, 147)
         btnProduct.Name = "btnProduct"
@@ -222,7 +225,7 @@ Partial Class FormDashboard
         btnCategory.Font = New Font("Segoe UI", 9F)
         btnCategory.ForeColor = Color.White
         btnCategory.HoverState.FillColor = Color.FromArgb(CByte(241), CByte(137), CByte(10))
-        'btnCategory.Image = My.Resources.Resources.cart
+        btnCategory.Image = My.Resources.Resources.layers
         btnCategory.ImageAlign = HorizontalAlignment.Left
         btnCategory.Location = New Point(19, 196)
         btnCategory.Name = "btnCategory"
@@ -246,7 +249,7 @@ Partial Class FormDashboard
         btnTransaction.Font = New Font("Segoe UI", 9F)
         btnTransaction.ForeColor = Color.White
         btnTransaction.HoverState.FillColor = Color.FromArgb(CByte(241), CByte(137), CByte(10))
-        'btnTransaction.Image = My.Resources.Resources.transaction
+        btnTransaction.Image = My.Resources.Resources.transaction
         btnTransaction.ImageAlign = HorizontalAlignment.Left
         btnTransaction.Location = New Point(19, 245)
         btnTransaction.Name = "btnTransaction"
@@ -270,7 +273,7 @@ Partial Class FormDashboard
         btnDashboard.Font = New Font("Segoe UI", 9F)
         btnDashboard.ForeColor = Color.White
         btnDashboard.HoverState.FillColor = Color.FromArgb(CByte(241), CByte(137), CByte(10))
-        'btnDashboard.Image = My.Resources.Resources.dashboard_interface
+        btnDashboard.Image = My.Resources.Resources.clerk
         btnDashboard.ImageAlign = HorizontalAlignment.Left
         btnDashboard.Location = New Point(19, 98)
         btnDashboard.Name = "btnDashboard"
@@ -304,7 +307,6 @@ Partial Class FormDashboard
         searchBox.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
         searchBox.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         searchBox.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        'searchBox.IconLeft = My.Resources.Resources.search
         searchBox.Location = New Point(17, 12)
         searchBox.Name = "searchBox"
         searchBox.PlaceholderForeColor = Color.Gray
@@ -349,7 +351,7 @@ Partial Class FormDashboard
     Friend WithEvents btnCategory As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnTransaction As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents Guna2Button5 As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents btnLogout As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnCustomer As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents btnReport As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button

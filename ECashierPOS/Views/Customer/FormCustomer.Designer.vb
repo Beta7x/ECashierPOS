@@ -72,6 +72,7 @@ Partial Class FormCustomer
         ' 
         ' textSearch
         ' 
+        textSearch.Animated = True
         textSearch.BorderColor = Color.Gainsboro
         textSearch.BorderRadius = 8
         textSearch.CustomizableEdges = CustomizableEdges1
@@ -93,6 +94,7 @@ Partial Class FormCustomer
         ' 
         ' btnInsert
         ' 
+        btnInsert.Animated = True
         btnInsert.BorderRadius = 8
         btnInsert.CustomizableEdges = CustomizableEdges3
         btnInsert.DisabledState.BorderColor = Color.DarkGray
@@ -102,7 +104,7 @@ Partial Class FormCustomer
         btnInsert.FillColor = Color.FromArgb(CByte(241), CByte(137), CByte(10))
         btnInsert.Font = New Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
         btnInsert.ForeColor = Color.White
-        'btnInsert.Image = My.Resources.Resources.plus__1_
+        btnInsert.Image = My.Resources.Resources.plus__1_
         btnInsert.ImageAlign = HorizontalAlignment.Left
         btnInsert.Location = New Point(235, 13)
         btnInsert.Name = "btnInsert"

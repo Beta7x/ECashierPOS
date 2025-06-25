@@ -87,6 +87,7 @@ Partial Class CustomerCard
         ' 
         ' btnUpdate
         ' 
+        btnUpdate.Animated = True
         btnUpdate.BorderColor = Color.DarkGray
         btnUpdate.BorderRadius = 8
         btnUpdate.BorderThickness = 1
@@ -98,15 +99,16 @@ Partial Class CustomerCard
         btnUpdate.FillColor = Color.Transparent
         btnUpdate.Font = New Font("Segoe UI", 9F)
         btnUpdate.ForeColor = Color.DimGray
+        btnUpdate.Image = My.Resources.Resources.pen
         btnUpdate.Location = New Point(902, 13)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnUpdate.Size = New Size(34, 34)
         btnUpdate.TabIndex = 4
-        btnUpdate.Text = "U"
         ' 
         ' btnDelete
         ' 
+        btnDelete.Animated = True
         btnDelete.BorderColor = Color.DarkGray
         btnDelete.BorderRadius = 8
         btnDelete.BorderThickness = 1
@@ -118,12 +120,12 @@ Partial Class CustomerCard
         btnDelete.FillColor = Color.Transparent
         btnDelete.Font = New Font("Segoe UI", 9F)
         btnDelete.ForeColor = Color.DimGray
+        btnDelete.Image = My.Resources.Resources.delete__1_
         btnDelete.Location = New Point(946, 13)
         btnDelete.Name = "btnDelete"
         btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnDelete.Size = New Size(34, 34)
         btnDelete.TabIndex = 5
-        btnDelete.Text = "D"
         ' 
         ' CustomerCard
         ' 
