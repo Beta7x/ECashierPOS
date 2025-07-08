@@ -2,7 +2,6 @@
 Imports ECashierPOS.Models.Entities
 Imports ECashierPOS.Models.Interfaces
 Imports ECashierPOS.Utils
-Imports MySql.Data.MySqlClient
 
 Namespace Models.Repositories
     Public Class ProductRepository
@@ -35,7 +34,7 @@ Namespace Models.Repositories
                 .PuchasePrice = Convert.ToDouble(reader("purchase_price")),
                 .SellingPrice = Convert.ToDouble(reader("selling_price")),
                 .Stock = Convert.ToInt32(reader("stock")),
-                .MinumumStock = Convert.ToInt32(reader("minimum_stock")),
+                .MinimumStock = Convert.ToInt32(reader("minimum_stock")),
                 .Image = reader("image").ToString(),
                 .CreatedAt = Convert.ToDateTime(reader("created_at")),
                 .UpdatedAt = If(IsDBNull(reader("updated_at")), Nothing, CType(reader("updated_at"), DateTime?))
@@ -52,7 +51,7 @@ Namespace Models.Repositories
                 {"purchase_price", entity.PuchasePrice},
                 {"selling_price", entity.SellingPrice},
                 {"stock", entity.Stock},
-                {"minimum_stock", entity.MinumumStock},
+                {"minimum_stock", entity.MinimumStock},
                 {"image", entity.Image}
             }
         End Function
