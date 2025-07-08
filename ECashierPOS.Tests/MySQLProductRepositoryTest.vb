@@ -1,7 +1,5 @@
-﻿Imports System.Security.Cryptography.X509Certificates
-Imports ECashierPOS.Models.Entities
+﻿Imports ECashierPOS.Models.Entities
 Imports ECashierPOS.Models.Interfaces
-Imports ECashierPOS.Models.Repositories
 Imports MySql.Data.MySqlClient
 Imports NUnit.Framework
 
@@ -83,7 +81,7 @@ Public Class MySQLProductRepositoryTest
                 .PuchasePrice = 10000,
                 .SellingPrice = 11000,
                 .Stock = 10,
-                .MinumumStock = 1
+                .MinimumStock = 1
             },
             New Product With {
                 .Id = Guid.NewGuid().ToString(),
@@ -94,7 +92,7 @@ Public Class MySQLProductRepositoryTest
                 .PuchasePrice = 10000,
                 .SellingPrice = 11000,
                 .Stock = 10,
-                .MinumumStock = 1
+                .MinimumStock = 1
             },
             New Product With {
                 .Id = Guid.NewGuid().ToString(),
@@ -105,7 +103,7 @@ Public Class MySQLProductRepositoryTest
                 .PuchasePrice = 10000,
                 .SellingPrice = 11000,
                 .Stock = 10,
-                .MinumumStock = 1
+                .MinimumStock = 1
             },
             New Product With {
                 .Id = Guid.NewGuid().ToString(),
@@ -116,7 +114,7 @@ Public Class MySQLProductRepositoryTest
                 .PuchasePrice = 10000,
                 .SellingPrice = 11000,
                 .Stock = 10,
-                .MinumumStock = 1
+                .MinimumStock = 1
             }
         }
 
@@ -139,7 +137,7 @@ Public Class MySQLProductRepositoryTest
             .SellingPrice = 16000,
             .Image = "/path/to/image.jpg",
             .Stock = 11,
-            .MinumumStock = 1
+            .MinimumStock = 1
         }
 
         Dim insertProductResult = productRepository.Insert(product)
@@ -171,7 +169,7 @@ Public Class MySQLProductRepositoryTest
             .PuchasePrice = "14000",
             .SellingPrice = "16000",
             .Stock = 100,
-            .MinumumStock = 1
+            .MinimumStock = 1
         }
 
         Dim insertProductResult = productRepository.Insert(product)
@@ -233,7 +231,7 @@ Public Class MySQLProductRepositoryTest
             .PuchasePrice = 10000,
             .SellingPrice = 11000,
             .Stock = 100,
-            .MinumumStock = 1
+            .MinimumStock = 1
         }
 
         Dim insertProductResult = productRepository.Insert(product)

@@ -128,9 +128,11 @@ Partial Class FormProduct
         ' 
         ' ContentPanel
         ' 
+        ContentPanel.AutoScroll = True
         ContentPanel.Dock = DockStyle.Fill
         ContentPanel.Location = New Point(0, 65)
         ContentPanel.Name = "ContentPanel"
+        ContentPanel.Padding = New Padding(25, 10, 0, 0)
         ContentPanel.Size = New Size(889, 385)
         ContentPanel.TabIndex = 3
         ' 

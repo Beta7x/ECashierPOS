@@ -30,7 +30,7 @@ Public Class ProductCard
             Return labelProductPrice.Text
         End Get
         Set(value As Decimal)
-            labelProductPrice.Text = value
+            labelProductPrice.Text = "Rp. " & value
         End Set
     End Property
 
@@ -39,7 +39,11 @@ Public Class ProductCard
             Return pbProductImage.ImageLocation
         End Get
         Set(value As String)
-            pbProductImage.Image = Image.FromFile(value)
+            If String.IsNullOrWhiteSpace(value) OrElse Not System.IO.File.Exists(value) Then
+                pbProductImage.Image = My.Resources.default_image
+            Else
+                pbProductImage.Image = Image.FromFile(value)
+            End If
         End Set
     End Property
 
@@ -55,7 +59,7 @@ Public Class ProductCard
         RaiseEvent OnUpdateProduct(Me, EventArgs.Empty)
     End Sub
 
-    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
         Dim formUpdate = New FormAddOrUpdateProduct(controller, ProductId)
 
         AddHandler formUpdate.OnReloadProducts, AddressOf HandleReloadProducts
@@ -69,5 +73,4 @@ Public Class ProductCard
             RaiseEvent OnDeleteRequested(ProductId)
         End If
     End Sub
-
 End Class

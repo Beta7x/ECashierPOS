@@ -20,9 +20,8 @@ Public Class FormLogin
         Dim username As String = textUsername.Text
         Dim password As String = textPassword.Text
 
-        'Dim result = authController.Login(username, password)
+        Dim result = authController.Login(username, password)
 
-        'If username = "admin" AndAlso password = "admin123" Then
         Dim user As New User With {
                 .Id = Guid.NewGuid().ToString(),
                 .FullName = "Admin nih bosss",
@@ -36,21 +35,16 @@ Public Class FormLogin
         Session.CurrentUser = user
 
         RaiseEvent LoginSuccess(Me, EventArgs.Empty)
-        'Else
-        '    MessageBox.Show("Error login", "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error)
-        'End If
 
         'If result.Success Then
         '    Session.CurrentUser = result.Data
 
         '    Dim dashboard = CType(serviceProvider.GetService(GetType(FormDashboard)), FormDashboard)
-        '    dashboard.StartPosition = FormStartPosition.CenterScreen
-        '    dashboard.Show()
+        '    RaiseEvent LoginSuccess(Me, EventArgs.Empty)
+
         '    Me.Hide()
         'Else
         '    MessageBox.Show(result.Message, "Login Gagal", MessageBoxButtons.OK, MessageBoxIcon.Error)
         'End If
-
-        'Me.Hide()
     End Sub
 End Class

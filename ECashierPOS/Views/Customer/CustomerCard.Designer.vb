@@ -46,7 +46,7 @@ Partial Class CustomerCard
         lableCustomerName.BackColor = Color.Transparent
         lableCustomerName.Font = New Font("Segoe UI", 9.75F)
         lableCustomerName.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lableCustomerName.Location = New Point(30, 21)
+        lableCustomerName.Location = New Point(30, 12)
         lableCustomerName.Name = "lableCustomerName"
         lableCustomerName.Size = New Size(98, 19)
         lableCustomerName.TabIndex = 0
@@ -57,7 +57,7 @@ Partial Class CustomerCard
         lablePhoneNumber.BackColor = Color.Transparent
         lablePhoneNumber.Font = New Font("Segoe UI", 9.75F)
         lablePhoneNumber.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lablePhoneNumber.Location = New Point(235, 21)
+        lablePhoneNumber.Location = New Point(235, 12)
         lablePhoneNumber.Name = "lablePhoneNumber"
         lablePhoneNumber.Size = New Size(87, 19)
         lablePhoneNumber.TabIndex = 1
@@ -68,7 +68,7 @@ Partial Class CustomerCard
         lableCustomerCreatedAt.BackColor = Color.Transparent
         lableCustomerCreatedAt.Font = New Font("Segoe UI", 9.75F)
         lableCustomerCreatedAt.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        lableCustomerCreatedAt.Location = New Point(426, 21)
+        lableCustomerCreatedAt.Location = New Point(426, 12)
         lableCustomerCreatedAt.Name = "lableCustomerCreatedAt"
         lableCustomerCreatedAt.Size = New Size(121, 19)
         lableCustomerCreatedAt.TabIndex = 2
@@ -79,7 +79,7 @@ Partial Class CustomerCard
         labelCustomerAddress.BackColor = Color.Transparent
         labelCustomerAddress.Font = New Font("Segoe UI", 9.75F)
         labelCustomerAddress.ForeColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        labelCustomerAddress.Location = New Point(615, 21)
+        labelCustomerAddress.Location = New Point(615, 12)
         labelCustomerAddress.Name = "labelCustomerAddress"
         labelCustomerAddress.Size = New Size(107, 19)
         labelCustomerAddress.TabIndex = 3
@@ -100,7 +100,7 @@ Partial Class CustomerCard
         btnUpdate.Font = New Font("Segoe UI", 9F)
         btnUpdate.ForeColor = Color.DimGray
         btnUpdate.Image = My.Resources.Resources.pen
-        btnUpdate.Location = New Point(902, 13)
+        btnUpdate.Location = New Point(902, 5)
         btnUpdate.Name = "btnUpdate"
         btnUpdate.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         btnUpdate.Size = New Size(34, 34)
@@ -121,7 +121,7 @@ Partial Class CustomerCard
         btnDelete.Font = New Font("Segoe UI", 9F)
         btnDelete.ForeColor = Color.DimGray
         btnDelete.Image = My.Resources.Resources.delete__1_
-        btnDelete.Location = New Point(946, 13)
+        btnDelete.Location = New Point(946, 5)
         btnDelete.Name = "btnDelete"
         btnDelete.ShadowDecoration.CustomizableEdges = CustomizableEdges2
         btnDelete.Size = New Size(34, 34)
@@ -131,14 +131,16 @@ Partial Class CustomerCard
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
+        BackColor = Color.White
         Controls.Add(btnDelete)
         Controls.Add(btnUpdate)
         Controls.Add(labelCustomerAddress)
         Controls.Add(lableCustomerCreatedAt)
         Controls.Add(lablePhoneNumber)
         Controls.Add(lableCustomerName)
+        Margin = New Padding(1)
         Name = "CustomerCard"
-        Size = New Size(1011, 62)
+        Size = New Size(1011, 45)
         ResumeLayout(False)
         PerformLayout()
     End Sub

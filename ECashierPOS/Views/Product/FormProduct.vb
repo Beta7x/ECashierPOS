@@ -41,6 +41,8 @@ Public Class FormProduct
             }
             AddHandler productCard.OnDeleteRequested, AddressOf HandleDeleteProduct
             AddHandler productCard.OnUpdateProduct, AddressOf LoadProducts
+
+            ContentPanel.Controls.Add(productCard)
         Next
     End Sub
 

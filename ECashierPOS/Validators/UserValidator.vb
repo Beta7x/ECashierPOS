@@ -41,9 +41,9 @@ Namespace Validators
                 result.AddError("Username tidak boleh kosong.")
             End If
 
-            If String.IsNullOrWhiteSpace(input.Password) Then
-                result.AddError("Password tidak boleh kosong.")
-            End If
+            'If String.IsNullOrWhiteSpace(input.Password) Then
+            '    result.AddError("Password tidak boleh kosong.")
+            'End If
 
             If String.IsNullOrWhiteSpace(input.Role) Then
                 result.AddError("Role user tidak boleh kosong.")

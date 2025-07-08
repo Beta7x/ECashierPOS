@@ -22,32 +22,30 @@ Partial Class FormDashboard
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges3 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges4 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges5 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges6 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges7 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges8 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges11 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges12 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges9 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges10 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges13 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges14 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges15 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges16 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges17 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges18 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges21 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges22 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges19 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges20 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges23 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Dim CustomizableEdges24 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges25 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
-        Dim CustomizableEdges26 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges1 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
+        Dim CustomizableEdges2 As Guna.UI2.WinForms.Suite.CustomizableEdges = New Guna.UI2.WinForms.Suite.CustomizableEdges()
         Guna2Panel1 = New Guna.UI2.WinForms.Guna2Panel()
         Guna2Button1 = New Guna.UI2.WinForms.Guna2Button()
         btnReport = New Guna.UI2.WinForms.Guna2Button()
@@ -59,15 +57,14 @@ Partial Class FormDashboard
         btnTransaction = New Guna.UI2.WinForms.Guna2Button()
         btnDashboard = New Guna.UI2.WinForms.Guna2Button()
         ContentPanel = New Guna.UI2.WinForms.Guna2Panel()
-        searchBox = New Guna.UI2.WinForms.Guna2TextBox()
-        HeaderPanel = New Guna.UI2.WinForms.Guna2Panel()
+        btnUser = New Guna.UI2.WinForms.Guna2Button()
         Guna2Panel1.SuspendLayout()
         Guna2Panel2.SuspendLayout()
-        HeaderPanel.SuspendLayout()
         SuspendLayout()
         ' 
         ' Guna2Panel1
         ' 
+        Guna2Panel1.Controls.Add(btnUser)
         Guna2Panel1.Controls.Add(Guna2Button1)
         Guna2Panel1.Controls.Add(btnReport)
         Guna2Panel1.Controls.Add(btnCustomer)
@@ -76,19 +73,19 @@ Partial Class FormDashboard
         Guna2Panel1.Controls.Add(btnCategory)
         Guna2Panel1.Controls.Add(btnTransaction)
         Guna2Panel1.Controls.Add(btnDashboard)
-        Guna2Panel1.CustomizableEdges = CustomizableEdges19
+        Guna2Panel1.CustomizableEdges = CustomizableEdges21
         Guna2Panel1.Dock = DockStyle.Left
         Guna2Panel1.FillColor = Color.FromArgb(CByte(28), CByte(39), CByte(40))
         Guna2Panel1.Location = New Point(0, 0)
         Guna2Panel1.Name = "Guna2Panel1"
-        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges20
+        Guna2Panel1.ShadowDecoration.CustomizableEdges = CustomizableEdges22
         Guna2Panel1.Size = New Size(224, 540)
         Guna2Panel1.TabIndex = 0
         ' 
         ' Guna2Button1
         ' 
         Guna2Button1.BackColor = Color.Transparent
-        Guna2Button1.CustomizableEdges = CustomizableEdges1
+        Guna2Button1.CustomizableEdges = CustomizableEdges3
         Guna2Button1.DisabledState.BorderColor = Color.DarkGray
         Guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray
         Guna2Button1.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -100,7 +97,7 @@ Partial Class FormDashboard
         Guna2Button1.ImageAlign = HorizontalAlignment.Left
         Guna2Button1.Location = New Point(30, 25)
         Guna2Button1.Name = "Guna2Button1"
-        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        Guna2Button1.ShadowDecoration.CustomizableEdges = CustomizableEdges4
         Guna2Button1.Size = New Size(160, 45)
         Guna2Button1.TabIndex = 0
         Guna2Button1.Text = "E-Cashier"
@@ -110,7 +107,7 @@ Partial Class FormDashboard
         btnReport.Animated = True
         btnReport.BackColor = Color.Transparent
         btnReport.BorderRadius = 8
-        btnReport.CustomizableEdges = CustomizableEdges3
+        btnReport.CustomizableEdges = CustomizableEdges5
         btnReport.DisabledState.BorderColor = Color.DarkGray
         btnReport.DisabledState.CustomBorderColor = Color.DarkGray
         btnReport.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -123,7 +120,7 @@ Partial Class FormDashboard
         btnReport.ImageAlign = HorizontalAlignment.Left
         btnReport.Location = New Point(19, 343)
         btnReport.Name = "btnReport"
-        btnReport.ShadowDecoration.CustomizableEdges = CustomizableEdges4
+        btnReport.ShadowDecoration.CustomizableEdges = CustomizableEdges6
         btnReport.Size = New Size(186, 43)
         btnReport.TabIndex = 6
         btnReport.Text = "Laporan"
@@ -134,7 +131,7 @@ Partial Class FormDashboard
         btnCustomer.Animated = True
         btnCustomer.BackColor = Color.Transparent
         btnCustomer.BorderRadius = 8
-        btnCustomer.CustomizableEdges = CustomizableEdges5
+        btnCustomer.CustomizableEdges = CustomizableEdges7
         btnCustomer.DisabledState.BorderColor = Color.DarkGray
         btnCustomer.DisabledState.CustomBorderColor = Color.DarkGray
         btnCustomer.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -147,7 +144,7 @@ Partial Class FormDashboard
         btnCustomer.ImageAlign = HorizontalAlignment.Left
         btnCustomer.Location = New Point(19, 294)
         btnCustomer.Name = "btnCustomer"
-        btnCustomer.ShadowDecoration.CustomizableEdges = CustomizableEdges6
+        btnCustomer.ShadowDecoration.CustomizableEdges = CustomizableEdges8
         btnCustomer.Size = New Size(186, 43)
         btnCustomer.TabIndex = 5
         btnCustomer.Text = "Pelanggan"
@@ -157,11 +154,11 @@ Partial Class FormDashboard
         ' 
         Guna2Panel2.BackColor = Color.Transparent
         Guna2Panel2.Controls.Add(btnLogout)
-        Guna2Panel2.CustomizableEdges = CustomizableEdges9
+        Guna2Panel2.CustomizableEdges = CustomizableEdges11
         Guna2Panel2.Dock = DockStyle.Bottom
         Guna2Panel2.Location = New Point(0, 452)
         Guna2Panel2.Name = "Guna2Panel2"
-        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges10
+        Guna2Panel2.ShadowDecoration.CustomizableEdges = CustomizableEdges12
         Guna2Panel2.Size = New Size(224, 88)
         Guna2Panel2.TabIndex = 1
         ' 
@@ -170,7 +167,7 @@ Partial Class FormDashboard
         btnLogout.Animated = True
         btnLogout.BackColor = Color.Transparent
         btnLogout.BorderRadius = 8
-        btnLogout.CustomizableEdges = CustomizableEdges7
+        btnLogout.CustomizableEdges = CustomizableEdges9
         btnLogout.DisabledState.BorderColor = Color.DarkGray
         btnLogout.DisabledState.CustomBorderColor = Color.DarkGray
         btnLogout.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -182,7 +179,7 @@ Partial Class FormDashboard
         btnLogout.ImageAlign = HorizontalAlignment.Left
         btnLogout.Location = New Point(25, 23)
         btnLogout.Name = "btnLogout"
-        btnLogout.ShadowDecoration.CustomizableEdges = CustomizableEdges8
+        btnLogout.ShadowDecoration.CustomizableEdges = CustomizableEdges10
         btnLogout.Size = New Size(176, 43)
         btnLogout.TabIndex = 5
         btnLogout.Text = "Logout"
@@ -192,7 +189,7 @@ Partial Class FormDashboard
         btnProduct.Animated = True
         btnProduct.BackColor = Color.Transparent
         btnProduct.BorderRadius = 8
-        btnProduct.CustomizableEdges = CustomizableEdges11
+        btnProduct.CustomizableEdges = CustomizableEdges13
         btnProduct.DisabledState.BorderColor = Color.DarkGray
         btnProduct.DisabledState.CustomBorderColor = Color.DarkGray
         btnProduct.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -205,7 +202,7 @@ Partial Class FormDashboard
         btnProduct.ImageAlign = HorizontalAlignment.Left
         btnProduct.Location = New Point(19, 147)
         btnProduct.Name = "btnProduct"
-        btnProduct.ShadowDecoration.CustomizableEdges = CustomizableEdges12
+        btnProduct.ShadowDecoration.CustomizableEdges = CustomizableEdges14
         btnProduct.Size = New Size(186, 43)
         btnProduct.TabIndex = 4
         btnProduct.Text = "Produk"
@@ -216,7 +213,7 @@ Partial Class FormDashboard
         btnCategory.Animated = True
         btnCategory.BackColor = Color.Transparent
         btnCategory.BorderRadius = 8
-        btnCategory.CustomizableEdges = CustomizableEdges13
+        btnCategory.CustomizableEdges = CustomizableEdges15
         btnCategory.DisabledState.BorderColor = Color.DarkGray
         btnCategory.DisabledState.CustomBorderColor = Color.DarkGray
         btnCategory.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -229,7 +226,7 @@ Partial Class FormDashboard
         btnCategory.ImageAlign = HorizontalAlignment.Left
         btnCategory.Location = New Point(19, 196)
         btnCategory.Name = "btnCategory"
-        btnCategory.ShadowDecoration.CustomizableEdges = CustomizableEdges14
+        btnCategory.ShadowDecoration.CustomizableEdges = CustomizableEdges16
         btnCategory.Size = New Size(186, 43)
         btnCategory.TabIndex = 3
         btnCategory.Text = "Kategori"
@@ -240,7 +237,7 @@ Partial Class FormDashboard
         btnTransaction.Animated = True
         btnTransaction.BackColor = Color.Transparent
         btnTransaction.BorderRadius = 8
-        btnTransaction.CustomizableEdges = CustomizableEdges15
+        btnTransaction.CustomizableEdges = CustomizableEdges17
         btnTransaction.DisabledState.BorderColor = Color.DarkGray
         btnTransaction.DisabledState.CustomBorderColor = Color.DarkGray
         btnTransaction.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -253,7 +250,7 @@ Partial Class FormDashboard
         btnTransaction.ImageAlign = HorizontalAlignment.Left
         btnTransaction.Location = New Point(19, 245)
         btnTransaction.Name = "btnTransaction"
-        btnTransaction.ShadowDecoration.CustomizableEdges = CustomizableEdges16
+        btnTransaction.ShadowDecoration.CustomizableEdges = CustomizableEdges18
         btnTransaction.Size = New Size(186, 43)
         btnTransaction.TabIndex = 2
         btnTransaction.Text = "Transaksi"
@@ -264,7 +261,7 @@ Partial Class FormDashboard
         btnDashboard.Animated = True
         btnDashboard.BackColor = Color.Transparent
         btnDashboard.BorderRadius = 8
-        btnDashboard.CustomizableEdges = CustomizableEdges17
+        btnDashboard.CustomizableEdges = CustomizableEdges19
         btnDashboard.DisabledState.BorderColor = Color.DarkGray
         btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray
         btnDashboard.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
@@ -277,7 +274,7 @@ Partial Class FormDashboard
         btnDashboard.ImageAlign = HorizontalAlignment.Left
         btnDashboard.Location = New Point(19, 98)
         btnDashboard.Name = "btnDashboard"
-        btnDashboard.ShadowDecoration.CustomizableEdges = CustomizableEdges18
+        btnDashboard.ShadowDecoration.CustomizableEdges = CustomizableEdges20
         btnDashboard.Size = New Size(186, 43)
         btnDashboard.TabIndex = 1
         btnDashboard.Text = "Dashboard"
@@ -286,47 +283,37 @@ Partial Class FormDashboard
         ' ContentPanel
         ' 
         ContentPanel.BackColor = SystemColors.Control
-        ContentPanel.CustomizableEdges = CustomizableEdges21
+        ContentPanel.CustomizableEdges = CustomizableEdges23
         ContentPanel.Dock = DockStyle.Fill
-        ContentPanel.Location = New Point(224, 61)
+        ContentPanel.Location = New Point(224, 0)
         ContentPanel.Name = "ContentPanel"
-        ContentPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges22
-        ContentPanel.Size = New Size(782, 479)
+        ContentPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges24
+        ContentPanel.Size = New Size(782, 540)
         ContentPanel.TabIndex = 2
         ' 
-        ' searchBox
+        ' btnUser
         ' 
-        searchBox.BorderRadius = 6
-        searchBox.CustomizableEdges = CustomizableEdges23
-        searchBox.DefaultText = ""
-        searchBox.DisabledState.BorderColor = Color.FromArgb(CByte(208), CByte(208), CByte(208))
-        searchBox.DisabledState.FillColor = Color.FromArgb(CByte(226), CByte(226), CByte(226))
-        searchBox.DisabledState.ForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        searchBox.DisabledState.PlaceholderForeColor = Color.FromArgb(CByte(138), CByte(138), CByte(138))
-        searchBox.FillColor = Color.FromArgb(CByte(238), CByte(238), CByte(233))
-        searchBox.FocusedState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        searchBox.Font = New Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point, CByte(0))
-        searchBox.HoverState.BorderColor = Color.FromArgb(CByte(94), CByte(148), CByte(255))
-        searchBox.Location = New Point(17, 12)
-        searchBox.Name = "searchBox"
-        searchBox.PlaceholderForeColor = Color.Gray
-        searchBox.PlaceholderText = "Cari"
-        searchBox.SelectedText = ""
-        searchBox.ShadowDecoration.CustomizableEdges = CustomizableEdges24
-        searchBox.Size = New Size(212, 36)
-        searchBox.TabIndex = 0
-        ' 
-        ' HeaderPanel
-        ' 
-        HeaderPanel.BackColor = Color.White
-        HeaderPanel.Controls.Add(searchBox)
-        HeaderPanel.CustomizableEdges = CustomizableEdges25
-        HeaderPanel.Dock = DockStyle.Top
-        HeaderPanel.Location = New Point(224, 0)
-        HeaderPanel.Name = "HeaderPanel"
-        HeaderPanel.ShadowDecoration.CustomizableEdges = CustomizableEdges26
-        HeaderPanel.Size = New Size(782, 61)
-        HeaderPanel.TabIndex = 1
+        btnUser.Animated = True
+        btnUser.BackColor = Color.Transparent
+        btnUser.BorderRadius = 8
+        btnUser.CustomizableEdges = CustomizableEdges1
+        btnUser.DisabledState.BorderColor = Color.DarkGray
+        btnUser.DisabledState.CustomBorderColor = Color.DarkGray
+        btnUser.DisabledState.FillColor = Color.FromArgb(CByte(169), CByte(169), CByte(169))
+        btnUser.DisabledState.ForeColor = Color.FromArgb(CByte(141), CByte(141), CByte(141))
+        btnUser.FillColor = Color.Transparent
+        btnUser.Font = New Font("Segoe UI", 9F)
+        btnUser.ForeColor = Color.White
+        btnUser.HoverState.FillColor = Color.FromArgb(CByte(241), CByte(137), CByte(10))
+        btnUser.Image = My.Resources.Resources.group
+        btnUser.ImageAlign = HorizontalAlignment.Left
+        btnUser.Location = New Point(19, 392)
+        btnUser.Name = "btnUser"
+        btnUser.ShadowDecoration.CustomizableEdges = CustomizableEdges2
+        btnUser.Size = New Size(186, 43)
+        btnUser.TabIndex = 7
+        btnUser.Text = "Pengguna"
+        btnUser.TextAlign = HorizontalAlignment.Left
         ' 
         ' FormDashboard
         ' 
@@ -334,14 +321,12 @@ Partial Class FormDashboard
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(1006, 540)
         Controls.Add(ContentPanel)
-        Controls.Add(HeaderPanel)
         Controls.Add(Guna2Panel1)
         Cursor = Cursors.Hand
         Name = "FormDashboard"
         Text = "Dashboard"
         Guna2Panel1.ResumeLayout(False)
         Guna2Panel2.ResumeLayout(False)
-        HeaderPanel.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -356,6 +341,5 @@ Partial Class FormDashboard
     Friend WithEvents btnReport As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents Guna2Button1 As Guna.UI2.WinForms.Guna2Button
     Friend WithEvents ContentPanel As Guna.UI2.WinForms.Guna2Panel
-    Friend WithEvents searchBox As Guna.UI2.WinForms.Guna2TextBox
-    Friend WithEvents HeaderPanel As Guna.UI2.WinForms.Guna2Panel
+    Friend WithEvents btnUser As Guna.UI2.WinForms.Guna2Button
 End Class

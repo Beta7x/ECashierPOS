@@ -154,10 +154,10 @@ Partial Class FormCategory
     End Sub
 
     Friend WithEvents Guna2Elipse1 As Guna.UI2.WinForms.Guna2Elipse
-    Friend WithEvents ContentPanel As FlowLayoutPanel
     Friend WithEvents Guna2Panel1 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2Panel2 As Guna.UI2.WinForms.Guna2Panel
     Friend WithEvents Guna2HtmlLabel1 As Guna.UI2.WinForms.Guna2HtmlLabel
     Friend WithEvents textSearch As Guna.UI2.WinForms.Guna2TextBox
     Friend WithEvents btnInsert As Guna.UI2.WinForms.Guna2Button
+    Friend WithEvents ContentPanel As FlowLayoutPanel
 End Class
