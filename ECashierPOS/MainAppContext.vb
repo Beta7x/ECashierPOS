@@ -15,6 +15,10 @@ Public Class MainAppContext
     End Sub
 
     Private Sub ShowLoginForm()
+        If loginForm IsNot Nothing Then
+            RemoveHandler loginForm.LoginSuccess, AddressOf OnLoginSuccess
+        End If
+
         ' Ambil form login dari DI
         loginForm = FormLoader.ResolveForm(Of FormLogin)(serviceProvider)
 
@@ -55,6 +59,7 @@ Public Class MainAppContext
         isLoggingOut = True
         dashboardForm.Hide()
         RemoveHandler dashboardForm.FormClosed, AddressOf OnDashboardClosed ' <- cegah ExitThread ke-trigger
+        Session.Clear()
 
         ShowLoginForm()
         isLoggingOut = False
