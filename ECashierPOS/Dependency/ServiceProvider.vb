@@ -30,6 +30,7 @@ Namespace Dependency
             services.AddSingleton(Of IProductService, ProductService)()
             services.AddSingleton(Of ICategoryService, CategoryService)()
             services.AddSingleton(Of IAuthService, AuthService)()
+            services.AddSingleton(Of IUserService, UserService)()
 
             ' Register all controllers
             services.AddSingleton(Of ProductController)()
@@ -47,6 +48,7 @@ Namespace Dependency
             services.AddSingleton(Of FormLogin)()
             services.AddSingleton(Of FormReport)()
             services.AddSingleton(Of FormTransaction)()
+            services.AddSingleton(Of FormUser)()
 
             Return services.BuildServiceProvider()
         End Function
