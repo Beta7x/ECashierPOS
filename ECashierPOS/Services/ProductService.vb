@@ -34,12 +34,14 @@ Namespace Services
             Dim newProduct As New Product With {
                 .Id = Guid.NewGuid().ToString(),
                 .CategoryId = createProductRequest.CategoryId,
+                .ProductName = createProductRequest.ProductName,
                 .ProductCode = createProductRequest.ProductCode,
                 .Stock = createProductRequest.Stock,
-                .MinumumStock = createProductRequest.MinimumStock,
+                .MinimumStock = createProductRequest.MinimumStock,
                 .PuchasePrice = createProductRequest.PurchasePrice,
                 .SellingPrice = createProductRequest.SellingPrice,
-                .Image = createProductRequest.Image
+                .Image = createProductRequest.Image,
+                .Description = createProductRequest.Description
             }
 
             Return productRepository.Insert(newProduct)
@@ -65,7 +67,8 @@ Namespace Services
                 .PuchasePrice = updateProductRequest.PurchasePrice,
                 .SellingPrice = updateProductRequest.SellingPrice,
                 .Stock = updateProductRequest.Stock,
-                .MinumumStock = updateProductRequest.MinimumStock
+                .MinimumStock = updateProductRequest.MinimumStock,
+                .Description = updateProductRequest.Description
             }
 
             Return productRepository.Update(product)
