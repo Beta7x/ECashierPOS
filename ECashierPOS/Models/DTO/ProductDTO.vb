@@ -9,5 +9,6 @@
         Public Property Stock As Integer
         Public Property MinimumStock As Integer
         Public Property Image As String
+        Public Property Description As String
     End Class
 End Namespace
