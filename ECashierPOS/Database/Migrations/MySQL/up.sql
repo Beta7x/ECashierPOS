@@ -122,3 +122,7 @@ CREATE TABLE IF NOT EXISTS stock_logs (
     updated_at DATETIME DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
+
+
+INSERT INTO users (id, full_name, username, password, role) VALUES ('287eee6a-b3d1-4e3c-9ec0-d6f494f52150', 'Kasir', 'kasir', '$2a$12$puzHn0XufgJXz2cJThEEh.kBkI3H1VTQmzqjARw9z2WWJVMwKCxJe', 'kasir');
+INSERT INTO users (id, full_name, username, password, role) VALUES ('526cfb58-c047-4d14-9bcc-fc6ebdf05bc1', 'Admin', 'admin', '$2a$12$5cTl0n5UIg1E066RnVUQNOUbOhuDlxMZMI6fOA5AuRxE9MDww.NLS', 'admin');
