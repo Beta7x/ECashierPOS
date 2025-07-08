@@ -9,7 +9,7 @@
         Public Property PuchasePrice As Double
         Public Property SellingPrice As Double
         Public Property Stock As Integer
-        Public Property MinumumStock As Integer
+        Public Property MinimumStock As Integer
         Public Property Image As String
         Public Property CreatedAt As DateTime
         Public Property UpdatedAt As DateTime?
