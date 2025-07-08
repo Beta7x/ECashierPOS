@@ -1,75 +1,35 @@
 ﻿Imports ECashierPOS.Models.DTO
 Imports ECashierPOS.Models.Entities
 Imports ECashierPOS.Models.Interfaces
-Imports ECashierPOS.Models.Repositories
+Imports ECashierPOS.Services.Interfaces
 Imports ECashierPOS.Utils
-Imports ECashierPOS.Validators
 
 Namespace Controllers
     Public Class UserController
-        Private ReadOnly repository As IUserRepository
-        Private ReadOnly validator As UserValidator
+        Private ReadOnly userService As IUserService
 
-        Public Sub New(userRepository As IUserRepository)
-            repository = userRepository
-            validator = New UserValidator()
+        Public Sub New(userService As IUserService, userRepository As IUserRepository)
+            Me.userService = userService
         End Sub
 
         Public Function GetAll() As OperationResult(Of List(Of User))
-            Return repository.GetAll()
+            Return userService.GetAllUsers()
+        End Function
+
+        Public Function GetUserById(id As String) As OperationResult(Of User)
+            Return userService.GetUserById(id)
         End Function
 
         Public Function UpdateUser(updateRequest As UserDTO) As OperationResult
-            Dim validation = validator.ValidateUpdate(updateRequest)
-
-            If Not validation.IsValid Then
-                Dim errorMessage As String = Nothing
-                For Each errMsg In validation.Errors
-                    errorMessage &= errMsg
-                Next
-                Return OperationResult.Fail(errorMessage)
-            End If
-
-            Dim user As New User With {
-                .Id = updateRequest.Id,
-                .FullName = updateRequest.FullName,
-                .Username = updateRequest.Username,
-                .Password = updateRequest.Password,
-                .Role = updateRequest.Role
-            }
-
-            Return repository.Update(user)
+            Return userService.UpdateUser(updateRequest)
         End Function
 
         Public Function AddUser(createRequest As UserDTO) As OperationResult
-            Dim validation = validator.ValidateCreate(createRequest)
-
-            If Not validation.IsValid Then
-                Dim errorMessage As String = Nothing
-                For Each errMsg In validation.Errors
-                    errorMessage &= errMsg
-                Next
-                Return OperationResult.Fail(errorMessage)
-            End If
-
-            Dim user As New User With {
-                .Id = Guid.NewGuid().ToString(),
-                .FullName = createRequest.FullName,
-                .Username = createRequest.Username,
-                .Password = createRequest.Password,
-                .Role = createRequest.Role
-            }
-
-            Return repository.Insert(user)
+            Return userService.AddUser(createRequest)
         End Function
 
         Public Function DeleteUser(id As String) As OperationResult
-            Dim validation = validator.ValidateDelete(id)
-            If Not validation.IsValid Then
-                Return OperationResult.Fail(validation.Errors(0))
-            End If
-
-            Return repository.Delete(id)
+            Return userService.DeleteUser(id)
         End Function
     End Class
 End Namespace
