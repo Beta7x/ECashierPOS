@@ -2,7 +2,6 @@
 Imports ECashierPOS.Models.Entities
 Imports ECashierPOS.Models.Interfaces
 Imports ECashierPOS.Utils
-Imports MySql.Data.MySqlClient
 
 Namespace Models.Repositories
     Public Class CustomerRepository
