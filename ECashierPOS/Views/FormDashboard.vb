@@ -28,14 +28,26 @@ Public Class FormDashboard
     End Sub
 
     Private Sub FormDashboard_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ActivateButton(btnDashboard)
+        LoadFormToPanel(ResolveForm(Of FormDashboardChild)(serviceProvider))
+    End Sub
+
+    Private Sub FormDashboard_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
+        If Me.Visible Then
+            SetupAccessControl()
+        End If
+    End Sub
+
+    Private Sub SetupAccessControl()
+        If Session.CurrentUser Is Nothing Then Exit Sub
+
         If Session.CurrentUser.Role = "admin" Then
             btnReport.Visible = True
+            btnUser.Visible = True
         Else
             btnReport.Visible = False
+            btnUser.Visible = False
         End If
-
-        ActivateButton(btnDashboard)
-        LoadFormToPanel(New FormDashboardChild())
     End Sub
 
     Private Sub ActivateButton(senderBtn As Guna.UI2.WinForms.Guna2Button)
@@ -60,12 +72,6 @@ Public Class FormDashboard
         childForm.Dock = DockStyle.Fill
         ContentPanel.Padding = New Padding(20)
         ContentPanel.Controls.Add(childForm)
-
-        If ContentPanel.Controls.OfType(Of FormCategory)().Any() Then
-            searchBox.Visible = False
-        Else
-            searchBox.Visible = True
-        End If
 
         childForm.Show()
     End Sub
@@ -108,5 +114,10 @@ Public Class FormDashboard
             Session.CurrentUser = Nothing
             RaiseEvent LogoutRequested(Me, EventArgs.Empty)
         End If
+    End Sub
+
+    Private Sub BtnUser_Click(sender As Object, e As EventArgs) Handles btnUser.Click
+        ActivateButton(btnUser)
+        LoadFormToPanel(ResolveForm(Of FormUser)(serviceProvider))
     End Sub
 End Class
